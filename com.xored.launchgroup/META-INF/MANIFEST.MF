@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Launchgroup
+Bundle-SymbolicName: com.xored.launchgroup;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.xored.launchgroup.CompositeLaunchUIPlugin
+Bundle-Vendor: VADIM
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.core;bundle-version="3.10.100",
+ org.eclipse.debug.ui;bundle-version="3.11.201",
+ org.eclipse.jdt.debug.ui;bundle-version="3.7.201"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: com.xored.launchgroup

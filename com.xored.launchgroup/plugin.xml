@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.core.launchDelegates">
+      <launchDelegate
+            delegate="com.xored.launchgroup.CompositeLaunchDelegate"
+            id="com.xored.launchgroup.delegate"
+            modes="run,debug,profile"
+            name="Launch_Group"
+            type="com.xored.launchgroup">
+      </launchDelegate>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="com.xored.launchgroup.CompositeLaunchTabGroup"
+            id="com.xored.launchgroup.tabgroup"
+            type="com.xored.launchgroup">
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="com.xored.launchgroup.CompositeLaunchDelegate"
+            id="com.xored.launchgroup"
+            name="Composite Launch Config">
+      </launchConfigurationType>
+   </extension>
+	<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+		<launchConfigurationTypeImage
+			id="com.xored.launchgroup.image"
+			configTypeID="com.xored.launchgroup"
+			icon="icons/group.gif">
+    	</launchConfigurationTypeImage>
+    </extension>
+</plugin>
